@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:minWidth="320dp"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/dogIv"
+        android:maxHeight="150dp"
+        android:maxWidth="150dp"
+        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dog_def"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/dogBreedHeaderTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dog_breed_header"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dogHeightHeaderTv"/>
+
+    <TextView
+        android:id="@+id/dogBreedTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:text="Bulldog"
+        android:textAlignment="center"
+        android:maxLines="2"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dogHeightTv"
+        app:layout_constraintStart_toEndOf="@id/dogBreedHeaderTv"/>
+
+    <TextView
+        android:id="@+id/dogHeightHeaderTv"
+        android:text="@string/dog_height_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintBottom_toTopOf="@id/dogWeightHeaderTv"
+        app:layout_constraintTop_toBottomOf="@id/dogBreedHeaderTv"/>
+
+    <TextView
+        android:id="@+id/dogHeightTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.5"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/dogWEightTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dogHeightHeaderTv"
+        app:layout_constraintTop_toBottomOf="@+id/dogBreedHeaderTv" />
+
+    <TextView
+        android:id="@+id/dogWeightHeaderTv"
+        android:text="@string/dog_weight_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/dogHeightHeaderTv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/dogWEightTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dogWeightHeaderTv"
+        app:layout_constraintTop_toBottomOf="@id/dogHeightTv" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="220dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
